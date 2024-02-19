@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPPU - Result</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    main {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    form {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #temp {
+        display: none;
+    }
+    nav {
+        padding: 15px;
+        width: 100%;
+        background-color: rgb(1, 112, 112);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav h2 {
+        color: #fff;
+        text-align: center;
+    }
+</style>
+<body>
+    <nav id="nav">
+        <img width="100px" src="./University_Logo.jpg" alt="" srcset="">
+        <h2>SAVITRIBAI PHULE PUNE UNIVERSITY</h2>
+    </nav>
+    <main>
+        <form id="form">
+            <input type="number" placeholder="Enter Seat Number" required/>
+            <input type="text" placeholder="Enter Mother's Name" required/>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+        <div id="temp">
+            <img src="./mem.jpg" alt="">
+        </div>
+    </main>
+</body>
+<script>
+    const form = document.querySelector("#form");
+    const temp = document.querySelector("#temp");
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.style.display = 'none';
+        temp.style.display = 'block';
+    });
+</script>
+</html>
